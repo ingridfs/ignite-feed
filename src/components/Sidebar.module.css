@@ -1,0 +1,104 @@
+.sidebar {
+    background-color: var(--gray-800);
+    height: 18rem;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cover  {
+    width: 100%;
+    height: 4.5rem;
+    object-fit: cover;
+}
+
+/* Minha forma de fazer abaixo */
+
+/* .profilePicture {
+    width: 100%;
+    height: 25px;
+    position: relative;
+} */
+/* 
+.profilePictureBox {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    border-radius: 8px;
+    border: 2px solid var(--green-500);
+    overflow: hidden;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--gray-800);
+    padding: 3px;
+}
+
+.profilePictureBox img {
+    width: 100%;
+    height: 49px;
+    border-radius: 8px;
+    object-fit: cover;
+} */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 1rem;  // Minha forma de fazer, parte do código comentado acima */
+    
+    /* Calculo para usar magin negativa conforme o tamanho do elemento + margins e bordas */
+    margin-top: calc(0px - 1.5rem - 6px);
+}
+/* Forma feita no curso */
+
+.avatar {
+    box-sizing: initial; 
+    /* // faz com que as bordas e margins não ocupem o espaço dentro da box se não houver espaço */
+    width: calc(3rem + 12px);
+    height: calc(3rem + 12px);
+    border-radius: 8px;
+    border: 4px solid var(--gray-800);
+    outline: 2px solid var(--green-500);
+}
+
+.profile strong {
+    margin-top: 1rem; 
+    color: var(--gray-100);
+    line-height: 1.6;
+}
+
+.profile span {
+    font-size: 0.875rem;  
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+.sidebar footer {
+    border-top: 1px solid var(--gray-600);
+    margin-top: 1.5rem;
+    padding: 1.5rem 2rem 2rem;
+}
+
+.sidebar footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: var(--green-500);
+    border: 1px solid var(--green-500);
+    border-radius: 8px;
+    height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    gap: 0.5rem;
+    transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s;
+}
+
+.sidebar footer a:hover {
+    background-color: var(--green-500);
+    color: var(--white);
+    transition: ease-in-out;
+}
